@@ -1,8 +1,5 @@
 var request = require('request');
 
-var URL = process.env.MNIST_API_URL
-var API_KEY = process.env.MNIST_API_KEY
-
 function detectMNIST(inputs, callback) {
     var columnNames = ["Label"];
     for (var f = 0; f < 784; f++) {
@@ -18,14 +15,14 @@ function detectMNIST(inputs, callback) {
         GlobalParameters: {}
     };
     var options = {
-        uri: URL,
+        uri: process.env.MNIST_API_URL,
         method: "POST",
         json: true,
         headers: {
             "Content-Length": body.length,
             "Content-Type": "application/json",
             "Accept": "application/json",
-            "Authorization": ("Bearer " + API_KEY)
+            "Authorization": ("Bearer " + process.env.MNIST_API_KEY)
         },
         body: body
     };
