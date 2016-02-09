@@ -1,0 +1,55 @@
+extends layout
+
+block content
+    div(class="container")
+        h1 MNIST
+        div(class="row")
+            div(class="col-md-6")
+                p draw a digit here!
+                canvas(id="main")
+                p
+                    button(id="clear" class="btn btn-default") clear
+            div(class="col-md-6")
+                p input:
+                canvas(id="input" style="border:1px solid" width="140" height="140")
+                hr
+                p output:
+                table(id="output" class="table")
+                    tr
+                        th(class="col-md-1")
+                        th(class="col-md-2") convolutional
+                    tr
+                        th 0
+                        td
+                    tr
+                        th 1
+                        td
+                    tr
+                        th 2
+                        td
+                    tr
+                        th 3
+                        td
+                    tr
+                        th 4
+                        td
+                    tr
+                        th 5
+                        td
+                    tr
+                        th 6
+                        td
+                    tr
+                        th 7
+                        td
+                    tr
+                        th 8
+                        td
+                    tr
+                        th 9
+                        td
+
+        footer(class="footer")
+            div(class="container-fluid")
+                b mnist test&nbsp;
+                span &copy; 2016 cimadai. MIT License. forked from sugyan/tensorflow-mnist.
